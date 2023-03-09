@@ -72,6 +72,15 @@ The reflog (_referenc log_) stores all changes that we have made in our git proj
 | Go to the `main` branch                       | `$ git checkout main `        | the latest commit of the current branch is the `HEAD`                                                |
 | Checkout the specific commit `56afce`         | `$ git checkout 56afce`       | commit `56afce` has to be on the current branch                                                      |
 
+## Merging
+
+| Description                                      | Command                            | Comment                                     |
+| :----------------------------------------------- | :--------------------------------- | :------------------------------------------ |
+| fast-forward merge _feature_ onto current branch | `$ git merge -ff feature`          | condition: no new commits on current branch |
+| recursively merge _feature_ onto current branch  | `$ git merge -s recursive feature` |                                             |
+
+Apart from `fast-forward` and `recursive` / `ort` (**o**stensibly **r**ecursive's **t**win) there are also the `resolve`, `octopus`, `ours`, and `subtree` strategies. See the [official documentation](https://git-scm.com/docs/git-merge) for further details.
+
 ## Branches
 
 | Description                    | Command               | Comment                                      |

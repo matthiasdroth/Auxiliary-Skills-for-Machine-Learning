@@ -154,3 +154,7 @@ Apart from `fast-forward` and `recursive` / `ort` (**o**stensibly **r**ecursive'
 
 - https://git-scm.com/ (git)
 - https://github.com/ (Github)
+
+---
+
+Open this file with your browser and use the browser's built-in print function to export the cheat sheet to PDF.

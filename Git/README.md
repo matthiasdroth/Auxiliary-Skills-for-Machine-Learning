@@ -21,13 +21,15 @@
 
 ## Commits
 
-| Description                          | Command                            | Comment                                         |
-| :----------------------------------- | :--------------------------------- | :---------------------------------------------- |
-| List all commits                     | `$ git log`                        | exit log via `q`                                |
-| Commit changes with a commit message | `$ git commit -m "commit message"` |                                                 |
-| Remove a commit (soft)               | `$ git reset --soft HEAD~1`        | remove the last n=1 commits                     |
-| Remove a commit                      | `$ git reset HEAD~1`               | also remove changed files from the staging area |
-| Remove a commit (hard)               | `$ git reset --hard HEAD~1`        | also remove changes to files                    |
+| Description                                      | Command                                             | Comment                                         |
+| :----------------------------------------------- | :-------------------------------------------------- | :---------------------------------------------- |
+| List all commits                                 | `$ git log`                                         | exit log via `q`                                |
+| Commit changes with a commit message             | `$ git commit -m "commit message"`                  |                                                 |
+| Remove a commit (soft)                           | `$ git reset --soft HEAD~1`                         | remove the last n=1 commits                     |
+| Remove a commit                                  | `$ git reset HEAD~1`                                | also remove changed files from the staging area |
+| Remove a commit (hard)                           | `$ git reset --hard HEAD~1`                         | also remove changes to files                    |
+| push local changes to remote                     | `$ git push`                                        | this requires an upstream branch                |
+| set up upstream branch `myBranch` and push to it | `$ git push --set-upstream remotes/origin/myBranch` | this assumes `origin` to be a remote            |
 
 ## Stash
 
@@ -56,6 +58,7 @@ The reflog (_referenc log_) stores all changes that we have made in our git proj
 
 | Description                                   | Command                       | Comment                                                                                              |
 | :-------------------------------------------- | :---------------------------- | :--------------------------------------------------------------------------------------------------- |
+| show name of remote                           | `$ git remote`                |                                                                                                      |
 | Remove untracked changes from "f1.txt"        | `$ git checkout f1.txt`       | checkout the latest commit of "f1.txt"                                                               |
 | Remove all untracked changes                  | `$ git checkout .`            | checkout the latest commit of all files                                                              |
 | Remove all untracked changes                  | `$ git restore .`             | checkout the latest commit of all files                                                              |
@@ -83,19 +86,32 @@ Apart from `fast-forward` and `recursive` / `ort` (**o**stensibly **r**ecursive'
 
 ## Branches
 
-| Description                    | Command               | Comment                                      |
-| :----------------------------- | :-------------------- | :------------------------------------------- |
-| Delete the branch `xyz`        | `$ git branch -d xyz` |                                              |
-| Force deletion of branch `xyz` | `$ git branch -D xyz` | also works if `xyz` has not been merged, yet |
+| Description                             | Command                    | Comment                                          |
+| :-------------------------------------- | :------------------------- | :----------------------------------------------- |
+| Delete the branch `xyz`                 | `$ git branch -d xyz`      |                                                  |
+| Show information on the `origin` remote | `$ git remote show origin` |                                                  |
+| List all branches                       | `$ git branch -a`          |                                                  |
+| List remote branches                    | `$ git branch -r`          |                                                  |
+| List information on local branches      | `$ git branch -vv`         | shows IDs, upstream branches and commit messages |
+| Force deletion of branch `xyz`          | `$ git branch -D xyz`      | also works if `xyz` has not been merged, yet     |
 
 - create a local branch
 - create a remote branch
+  | List remote branches | `$ git branch -r` | |
 - create a local tracking branch
 
 ## Pull requests
 
 | Description | Command | Comment |
 | :---------- | :------ | :------ |
+
+## Remotes
+
+| Description                                                  | Command                           | Comment                                                     |
+| :----------------------------------------------------------- | :-------------------------------- | :---------------------------------------------------------- |
+| set `origin` as a remote for `url`                           | `$ git remote add origin url`     | `url` is the URL of the remote `origin`                     |
+| clone repo with url `https://myUrl.com` from remote          | `$ git clone https://myUrl.com`   | clones the repo folder into the current directory           |
+| clone repo with url `https://myUrl.com` from remote in place | `$ git clone https://myUrl.com .` | clones the repo folder _content_ into the current directory |
 
 ## Detached `HEAD`
 

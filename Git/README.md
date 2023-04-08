@@ -1,25 +1,25 @@
-# Git Commands Cheat Sheet
+# Git Commands – Cheat Sheet
 
-## Status etc.
-
-| Description | Command | Comment |
-| :---------- | :------ | :------ |
-
-- git log
-- Head
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
 
 ## Staging Area
 
-| Description                                                | Command                   | Comment |
-| :--------------------------------------------------------- | :------------------------ | :------ |
-| Show status of the staging area                            | `$ git status`            |         |
-| List all files in the staging area                         | `$ git ls-files`          |         |
-| Add all changed files to the staging area                  | `$ git add .`             |         |
-| Add the files "f1.txt" and "f2.txt" to the staging area    | `$ git add f1.txt f2.txt` |         |
-| Remove all changed files from the staging area             | `$ git rm .`              |         |
-| Remove the files "f1.txt" and "f2.txt" to the staging area | `$ git rm f1.txt f2.txt`  |         |
+bla bla bla bla bla bla bla
+
+| Description                                                | Command                   | Comment                                           |
+| :--------------------------------------------------------- | :------------------------ | :------------------------------------------------ |
+| Show status of the staging area                            | `$ git status`            | also shows the current branch                     |
+| List all files in the staging area                         | `$ git ls-files`          |                                                   |
+| Add all changed files to the staging area                  | `$ git add .`             |                                                   |
+| Add the files "f1.txt" and "f2.txt" to the staging area    | `$ git add f1.txt f2.txt` |                                                   |
+| Remove all changed files from the staging area             | `$ git rm .`              |                                                   |
+| Remove the files "f1.txt" and "f2.txt" to the staging area | `$ git rm f1.txt f2.txt`  |                                                   |
+| Restore all files in the staging area                      | `$ git restore .`         | restores all files as per the previous commit     |
+| Restore all files in the staging area                      | `$ git restore f1.txt`    | restores file "f1.txt" as per the previous commit |
 
 ## Commits
+
+bla bla bla bla bla bla bla
 
 | Description                                      | Command                                             | Comment                                         |
 | :----------------------------------------------- | :-------------------------------------------------- | :---------------------------------------------- |
@@ -33,20 +33,22 @@
 
 ## Stash
 
-| Description                                              | Command                            | Comment                                                                                                      |
-| :------------------------------------------------------- | :--------------------------------- | :----------------------------------------------------------------------------------------------------------- |
-| Move uncommitted and unstaged changes to the stash       | `$ git stash`                      | the current branch has no changes anymore; `git stash` can be applied repeatedly, thus creating more stashes |
-| Add a message to a new stash                             | `$ git stash push -m "my message"` | the pushed message is shown next to the stash when running `$ git stash list`                                |
-| Inspect the stashes                                      | `git stash list`                   | the latest stash is always at the top and stash indices are shown                                            |
-| Move changes from the latest stash to the current branch | `$ git stash apply`                | apply the latest stash                                                                                       |
-| Move changes from the third stash to the current branch  | `$ git stash apply 3`              | apply the third stash                                                                                        |
-| Move the latest (=> index 0) stash to our project        | `$ git stash pop 0`                | the according stash is deleted $\Rightarrow$ this can be run repeatedly                                      |
-| Delete a specific stash via its index                    | `$ git stash drop 0`               |                                                                                                              |
-| Delete the entire stash stack                            | `$ git stash clear`                |                                                                                                              |
+bla bla bla bla bla bla bla
+
+| Description                                                  | Command                            | Comment                                                                                                      |
+| :----------------------------------------------------------- | :--------------------------------- | :----------------------------------------------------------------------------------------------------------- |
+| Move uncommitted and unstaged changes to the stash           | `$ git stash`                      | the current branch has no changes anymore; `git stash` can be applied repeatedly, thus creating more stashes |
+| Add a message to a new stash                                 | `$ git stash push -m "my message"` | the pushed message is shown next to the stash when running `$ git stash list`                                |
+| Inspect the stashes                                          | `git stash list`                   | the latest stash is always at the top and stash indices are shown                                            |
+| Move changes from the latest stash to the current branch     | `$ git stash apply`                | apply the latest stash                                                                                       |
+| Move changes from the third stash to the current branch      | `$ git stash apply 3`              | apply the third stash                                                                                        |
+| Move the latest ($\Rightarrow$ index 0) stash to our project | `$ git stash pop 0`                | the according stash is deleted $\Rightarrow$ this can be run repeatedly                                      |
+| Delete a specific stash via its index                        | `$ git stash drop 0`               |                                                                                                              |
+| Delete the entire stash stack                                | `$ git stash clear`                |                                                                                                              |
 
 ## Reflog
 
-The reflog (_referenc log_) stores all changes that we have made in our git project (but only for 30 days). For example, the reflog can restore changes on a feature branch that has been deleted.
+The reflog (_reference log_) stores all changes that we have made in our git project (but only for 30 days). For example, the reflog can restore changes on a feature branch that has been deleted.
 
 | Description                                        | Command                      | Comment                                     |
 | :------------------------------------------------- | :--------------------------- | :------------------------------------------ |
@@ -55,6 +57,8 @@ The reflog (_referenc log_) stores all changes that we have made in our git proj
 | hard reset to a given head index (`3`)             | `$ git reset --hard HEAD~3`  | detached HEAD $\Rightarrow$ create a branch |
 
 ## Else
+
+bla bla bla bla bla bla bla
 
 | Description                                   | Command                       | Comment                                                                                              |
 | :-------------------------------------------- | :---------------------------- | :--------------------------------------------------------------------------------------------------- |
@@ -77,6 +81,8 @@ The reflog (_referenc log_) stores all changes that we have made in our git proj
 
 ## Merging
 
+bla bla bla bla bla bla bla
+
 | Description                                      | Command                            | Comment                                     |
 | :----------------------------------------------- | :--------------------------------- | :------------------------------------------ |
 | fast-forward merge _feature_ onto current branch | `$ git merge -ff feature`          | condition: no new commits on current branch |
@@ -85,6 +91,8 @@ The reflog (_referenc log_) stores all changes that we have made in our git proj
 Apart from `fast-forward` and `recursive` / `ort` (**o**stensibly **r**ecursive's **t**win) there are also the `resolve`, `octopus`, `ours`, and `subtree` strategies. See the [official documentation](https://git-scm.com/docs/git-merge) for further details.
 
 ## Branches
+
+bla bla bla bla bla bla bla
 
 | Description                             | Command                    | Comment                                          |
 | :-------------------------------------- | :------------------------- | :----------------------------------------------- |
@@ -102,10 +110,14 @@ Apart from `fast-forward` and `recursive` / `ort` (**o**stensibly **r**ecursive'
 
 ## Pull requests
 
+bla bla bla bla bla bla bla
+
 | Description | Command | Comment |
 | :---------- | :------ | :------ |
 
 ## Remotes
+
+bla bla bla bla bla bla bla
 
 | Description                                                  | Command                           | Comment                                                     |
 | :----------------------------------------------------------- | :-------------------------------- | :---------------------------------------------------------- |
@@ -114,6 +126,8 @@ Apart from `fast-forward` and `recursive` / `ort` (**o**stensibly **r**ecursive'
 | clone repo with url `https://myUrl.com` from remote in place | `$ git clone https://myUrl.com .` | clones the repo folder _content_ into the current directory |
 
 ## Detached `HEAD`
+
+bla bla bla bla bla bla bla
 
 | Description                          | Command                             | Comment                                                                                                |
 | :----------------------------------- | :---------------------------------- | :----------------------------------------------------------------------------------------------------- |
@@ -133,6 +147,8 @@ Apart from `fast-forward` and `recursive` / `ort` (**o**stensibly **r**ecursive'
 - When in doubt, refer to the official [`.gitignore` documentation](https://git-scm.com/docs/gitignore).
 
 ## Extra 1: other useful shell commands
+
+bla bla bla bla bla bla bla
 
 | Description                                              | Command                                 |
 | :------------------------------------------------------- | :-------------------------------------- |
